@@ -10,3 +10,4 @@ public class Passeio
 
     public ICollection<Visita> Visitas = [];
 }
+
