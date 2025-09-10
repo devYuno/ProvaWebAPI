@@ -1,5 +1,5 @@
 namespace WebTuor.UseCases.EditPasseio;
 
 public record EditPasseioResponse(
-    Guid PasseioId
+    Guid VisitaId
 );
