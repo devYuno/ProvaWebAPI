@@ -4,7 +4,7 @@ namespace WebTuor.UseCases.CreatePasseio;
 
 public record CreatePasseioPayload
 {
-    public Guid UserId { get; set; }
+    public Guid UserId { get; init; }
 
     [Required]
     [MaxLength(20)]

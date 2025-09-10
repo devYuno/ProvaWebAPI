@@ -2,6 +2,7 @@ using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using WebTuor.Endpoints;
 using WebTuor.Models;
 using WebTuor.Services.JWT;
 using WebTuor.Services.Users;
@@ -46,5 +47,8 @@ builder.Services.AddTransient<IUsersService, EFUserService>();
 
 
 var app = builder.Build();
+
+app.ConfigureAuthEndpoints();
+app.ConfigureUserEndpoints();
 
 app.Run();
