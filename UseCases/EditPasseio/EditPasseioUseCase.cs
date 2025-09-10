@@ -30,6 +30,12 @@ public class EditPasseioUseCase(WebTuorDbContext ctx)
             PontoTuristico = ponto
         };
 
+        ctx.Visita.Add(visita);
+        passeio.Visitas.Add(visita);
+        ponto.Visitas.Add(visita);
+
+        await ctx.SaveChangesAsync();
+
         return Result<EditPasseioResponse>.Success(new(visita.Id));
     }
 
