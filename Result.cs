@@ -1,4 +1,4 @@
-namespace WebTuor.Models;
+namespace WebTuor;
 
 public record Result<T>(
     T Data,
